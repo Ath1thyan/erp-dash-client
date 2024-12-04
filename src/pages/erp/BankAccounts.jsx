@@ -21,7 +21,7 @@ const BankAccounts = () => {
 
   useEffect(() => {
     // Fetch bank accounts data
-    axios.get('http://localhost:3000/api/bankAccounts')
+    axios.get('https://erp-dash-server.onrender.com/api/bankAccounts')
       .then(response => {
         setBankAccounts(response.data);
         setFilteredAccounts(response.data);
@@ -48,7 +48,7 @@ const BankAccounts = () => {
 
   const openModal = (accountName) => {
     // Fetch the account details
-    axios.get(`http://localhost:3000/api/bankAccounts/${accountName}`)
+    axios.get(`https://erp-dash-server.onrender.com/api/bankAccounts/${accountName}`)
       .then(response => {
         setSelectedAccount(response.data);
         setModalIsOpen(true);

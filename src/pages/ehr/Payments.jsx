@@ -18,7 +18,7 @@ const Payments = () => {
 
   // Fetch payments data from API
   useEffect(() => {
-    axios.get('http://localhost:3000/api/payments')
+    axios.get('https://erp-dash-server.onrender.com/api/payments')
       .then(response => setPayments(response.data))
       .catch(error => console.error('Error fetching payments:', error))
   }, [])

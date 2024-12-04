@@ -13,7 +13,7 @@ const Patients = () => {
 
   useEffect(() => {
     // Fetch patients data from the API
-    axios.get('http://localhost:3000/api/patients')
+    axios.get('https://erp-dash-server.onrender.com/api/patients')
       .then(response => setPatients(response.data))
       .catch(error => console.error("Error fetching patients:", error));
   }, []);

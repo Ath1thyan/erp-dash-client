@@ -13,7 +13,7 @@ const Billings = () => {
 
   useEffect(() => {
     // Fetch bills data from the API
-    axios.get('http://localhost:3000/api/bills')
+    axios.get('https://erp-dash-server.onrender.com/api/bills')
       .then(response => setBills(response.data))
       .catch(error => console.error("Error fetching bills:", error));
   }, []);

@@ -13,7 +13,7 @@ const Warehouse = () => {
 
   // Fetch the list of warehouses
   useEffect(() => {
-    axios.get('http://localhost:3000/api/warehouses')
+    axios.get('https://erp-dash-server.onrender.com/api/warehouses')
       .then(response => {
         setWarehouses(response.data);
         setLoading(false);
@@ -27,7 +27,7 @@ const Warehouse = () => {
   // Fetch details of the selected warehouse
   const fetchWarehouseDetails = (warehouseName) => {
     setLoading(true);
-    axios.get(`http://localhost:3000/api/warehouses/${warehouseName}`)
+    axios.get(`https://erp-dash-server.onrender.com/api/warehouses/${warehouseName}`)
       .then(response => {
         setSelectedWarehouse(response.data);
         setLoading(false);

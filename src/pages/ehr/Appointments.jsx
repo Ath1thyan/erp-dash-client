@@ -16,7 +16,7 @@ const Appointments = () => {
   useEffect(() => {
     // Fetch appointments from API
     const fetchAppointments = async () => {
-      const response = await fetch('http://localhost:3000/api/appointments');
+      const response = await fetch('https://erp-dash-server.onrender.com/api/appointments');
       const data = await response.json();
       setAppointments(data);
     };

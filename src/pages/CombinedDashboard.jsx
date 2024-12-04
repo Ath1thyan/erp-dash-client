@@ -27,14 +27,14 @@ const CombinedDashboard = () => {
     // Fetching data for both EHR and ERP components
     const fetchData = async () => {
       try {
-        const usersRes = await axios.get('http://localhost:3000/api/users');
-        const warehousesRes = await axios.get('http://localhost:3000/api/warehouses');
-        const companiesRes = await axios.get('http://localhost:3000/api/companies');
-        const bankAccountsRes = await axios.get('http://localhost:3000/api/bankAccounts');
-        const patientsRes = await axios.get('http://localhost:3000/api/patients');
-        const appointmentsRes = await axios.get('http://localhost:3000/api/appointments');
-        const financesRes = await axios.get('http://localhost:3000/api/finances');
-        const billsRes = await axios.get('http://localhost:3000/api/bills');
+        const usersRes = await axios.get('https://erp-dash-server.onrender.com/api/users');
+        const warehousesRes = await axios.get('https://erp-dash-server.onrender.com/api/warehouses');
+        const companiesRes = await axios.get('https://erp-dash-server.onrender.com/api/companies');
+        const bankAccountsRes = await axios.get('https://erp-dash-server.onrender.com/api/bankAccounts');
+        const patientsRes = await axios.get('https://erp-dash-server.onrender.com/api/patients');
+        const appointmentsRes = await axios.get('https://erp-dash-server.onrender.com/api/appointments');
+        const financesRes = await axios.get('https://erp-dash-server.onrender.com/api/finances');
+        const billsRes = await axios.get('https://erp-dash-server.onrender.com/api/bills');
         
         setUsers(usersRes.data);
         setWarehouses(warehousesRes.data);

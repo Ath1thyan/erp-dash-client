@@ -22,7 +22,7 @@ const Users = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const res = await axios.get('http://localhost:3000/api/users');
+        const res = await axios.get('https://erp-dash-server.onrender.com/api/users');
         setUsers(res.data);
         setLoading(false);
       } catch (err) {
@@ -35,7 +35,7 @@ const Users = () => {
 
   const openModal = (userName) => {
     axios
-      .get(`http://localhost:3000/api/users/${userName}`)
+      .get(`https://erp-dash-server.onrender.com/api/users/${userName}`)
       .then((response) => {
         setSelectedUser(response.data);
         setModalIsOpen(true);
@@ -66,12 +66,12 @@ const Users = () => {
 
   const handleAddUser = async () => {
     try {
-      await axios.post('http://localhost:3000/api/users', newUser);
+      await axios.post('https://erp-dash-server.onrender.com/api/users', newUser);
       alert('User added successfully!');
       setNewUser({ name: '', email: '', role: '' });
       closeModal();
       // Fetch updated users
-      const res = await axios.get('http://localhost:3000/api/users');
+      const res = await axios.get('https://erp-dash-server.onrender.com/api/users');
       setUsers(res.data);
     } catch (err) {
       console.error("Error adding user:", err);

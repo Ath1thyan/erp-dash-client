@@ -15,7 +15,7 @@ const Finance = () => {
 
   // Fetching Finance Data
   useEffect(() => {
-    axios.get('http://localhost:3000/api/finances')
+    axios.get('https://erp-dash-server.onrender.com/api/finances')
       .then((response) => {
         setFinanceData(response.data);
       })
@@ -45,7 +45,7 @@ const Finance = () => {
 
   // Modal for detailed view of selected finance entry
   const handleFinanceClick = (id) => {
-    axios.get(`http://localhost:3000/api/finances/${id}`)
+    axios.get(`https://erp-dash-server.onrender.com/api/finances/${id}`)
       .then(response => {
         setSelectedFinance(response.data);
       })

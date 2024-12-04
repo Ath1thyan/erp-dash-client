@@ -22,11 +22,11 @@ const Dashboard2 = () => {
 
   // Fetch data for patients, bills, payments, appointments, and finances
   useEffect(() => {
-    const fetchPatients = fetchData('http://localhost:3000/api/patients');
-    const fetchBills = fetchData('http://localhost:3000/api/bills');
-    const fetchPayments = fetchData('http://localhost:3000/api/payments');
-    const fetchAppointments = fetchData('http://localhost:3000/api/appointments');
-    const fetchFinances = fetchData('http://localhost:3000/api/finances');
+    const fetchPatients = fetchData('https://erp-dash-server.onrender.com/api/patients');
+    const fetchBills = fetchData('https://erp-dash-server.onrender.com/api/bills');
+    const fetchPayments = fetchData('https://erp-dash-server.onrender.com/api/payments');
+    const fetchAppointments = fetchData('https://erp-dash-server.onrender.com/api/appointments');
+    const fetchFinances = fetchData('https://erp-dash-server.onrender.com/api/finances');
 
     Promise.all([fetchPatients, fetchBills, fetchPayments, fetchAppointments, fetchFinances])
       .then(([patientsData, billsData, paymentsData, appointmentsData, financesData]) => {

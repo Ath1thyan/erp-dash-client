@@ -22,16 +22,16 @@ const Dashboard = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const usersRes = await axios.get('http://localhost:3000/api/users');
+                const usersRes = await axios.get('https://erp-dash-server.onrender.com/api/users');
                 setUsers(usersRes.data);
 
-                const warehousesRes = await axios.get('http://localhost:3000/api/warehouses');
+                const warehousesRes = await axios.get('https://erp-dash-server.onrender.com/api/warehouses');
                 setWarehouses(warehousesRes.data);
 
-                const companiesRes = await axios.get('http://localhost:3000/api/companies');
+                const companiesRes = await axios.get('https://erp-dash-server.onrender.com/api/companies');
                 setCompanies(companiesRes.data);
 
-                const bankAccountsRes = await axios.get('http://localhost:3000/api/bankAccounts');
+                const bankAccountsRes = await axios.get('https://erp-dash-server.onrender.com/api/bankAccounts');
                 setBankAccounts(bankAccountsRes.data);
 
                 setLoading(false);

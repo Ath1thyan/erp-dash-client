@@ -20,7 +20,7 @@ const Companies = () => {
   
   useEffect(() => {
     // Fetch list of companies
-    axios.get('http://localhost:3000/api/companies')
+    axios.get('https://erp-dash-server.onrender.com/api/companies')
       .then(response => {
         setCompanies(response.data);
         setFilteredCompanies(response.data); // Default show all companies
